@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<title>
+		Multi-Page Registration Form
+	</title>
+
+	
+</head>
+	<link rel="stylesheet" type="text/css" href="mystyles.css">
+
+<body>
+	<big><h1>Registration Form</h1></big><br>
+	<u><h2>Personal Information</h2></u>
+
+	<!-- Create Form -->
+	
+    <form action="C:\Users\akash7481\Documents\html tutorial\2nd form.html" name="myForm" onsubmit="return validateForm()">
+
+
+		<!-- Details -->
+		<div class="form-control">
+			<label for="name" id="label-name">
+				Name
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="name"
+				placeholder="First name" /><br>
+				<input type="text"
+				id="name"
+				placeholder="Last name" />
+		</div>
+
+		<div class="form-control">
+			<label for="email" id="label-email">
+				Email
+			</label>
+
+			<!-- Input Type Email-->
+			<input type="email"
+				id="email"
+				placeholder="Enter your email" />
+		</div>
+
+		<div class="form-control">
+			 <label for="date" id="label-date">Date of Birth:</label>
+  			<input type="date" id="birthday" name="birthday">
+
+			
+		</div>
+		<div class="form-control">
+			<label for="mother's name" id="label-mothername">
+				Mother's Name
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="name"
+				placeholder="First name" /> <br>
+				<input type="text"
+				id="name"
+				placeholder="Last name" />
+		</div>
+		<div class="form-control">
+			<label for="name" id="label-fathername">
+				Father's Name
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="father's name"
+				placeholder="First name" /> <br>
+				<input type="text"
+				id="name"
+				placeholder="Last name" />
+		</div>
+		</div>
+	 		 <label>Gender:</label>
+ 			 <input type="radio" name="gender" value="male" /> Male
+  			<input type="radio" name="gender" value="female" /> Female
+		</div>
+		<br><br>
+
+		<div class="form-control">
+			<label for="role" id="label-role">
+				Nationality
+			</label>
+			
+			<!-- Dropdown options -->
+			<select name="role" id="role">
+				<option value="student">Indian</option>
+				
+				<option value="other">Other</option>
+			</select>
+		</div>
+		<div class="form-control">
+			<label for="address" id="label-address">
+				Home Address
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="address"
+				placeholder="Street address" /> <br>
+				<input type="text"
+				id="address"
+				placeholder="city" /><br>
+				<select name="country" id="country">
+				<option value="india">India</option>
+				
+				<option value="other">Other</option>
+			</select>
+		</div>
+		<div class="form-control">
+		  <label for="phone">Telephone-Home:</label><br>
+  			<input type="tel" id="phone" name="phone" placeholder="###-###-####" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+		</div>
+		<div class="form-control">
+		  <label for="phone">Telephone-Mobile:</label><br>
+  			<input type="tel" id="phone" name="phone" placeholder="###-###-####" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+		</div>
+
+		<!-- Multi-line Text Input Control -->
+		<!--<a href="2nd form.html">Next</a>-->
+		  <input type="submit" value="Submit" onclick="validateForm()">
+		  <!--<button type="submit" id="submit-button">Submit</button>-->
+
+
+
+	</form>
+
+</body>
+
+ <script>
+
+	function validateForm() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+
+  if (name == "" || email == "") {
+    alert("Name and email fields are required");
+    return false;
+  }
+
+  if (!email.includes("@")) {
+    alert("Invalid email format");
+    return false;
+  }
+
+  return true;
+}
+	document.getElementById("submit").addEventListener("click", function() {
+  if (validateForm()) {
+    window.location.assign = ("2nd form.html");
+  }
+});
+  
+</script>
+
+
+</html>
